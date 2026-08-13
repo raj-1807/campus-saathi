@@ -1,0 +1,9 @@
+langchain
+sentence-transformers
+faiss-cpu
+fastapi
+uvicorn[standard]
+streamlit
+python-dotenv
+pydantic
+google-generativeai

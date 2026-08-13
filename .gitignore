@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# Env / secrets
+.env
+*.key
+
+# Data (keep structure, ignore large/raw files if needed)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Vector store artifacts
+*.faiss
+*.index
+chroma_db/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
