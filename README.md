@@ -78,18 +78,3 @@ uvicorn src.api.main:app --reload
 streamlit run frontend/app.py
 ```
 
-## 3-Day Roadmap
-
-- **Day 1 — Foundation & Individual Modules**: repo/architecture set up, chunking script, embeddings + vector DB on dummy data, LLM API connected, FastAPI mock endpoint, UI skeleton.
-- **Day 2 — Integration & Working MVP**: real data through the full pipeline, retrieval → LLM → API → UI connected end-to-end, source/citation display, basic error handling.
-- **Day 3 — Testing, Optimization & Presentation**: retrieval tuning, bug fixes, UI polish, PPT + architecture diagram + documentation, judge Q&A rehearsal, backup demo video.
-
-See `docs/daily-log.md` for the running documentation log.
-
-## Must / Should / Nice-to-Have
-
-**Must:** document ingestion + chunking, embeddings + vector DB, working retrieval, LLM answer generation, basic UI, source/citation display, end-to-end integration tested, PPT + architecture diagram, 3–5 rehearsed demo queries.
-
-**Should:** better prompt engineering, edge-case error handling, UI polish, larger test dataset, "not found" fallback.
-
-**Nice to have:** chat history, multi-format file support, public deployment, re-ranking/hybrid search, analytics dashboard.
