@@ -1,0 +1,149 @@
+.searchCard {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: all var(--transition-base);
+  animation: fadeInUp 0.4s ease-out both;
+  position: relative;
+  overflow: hidden;
+}
+
+.searchCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.searchCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.searchCard:hover::before {
+  opacity: 1;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: var(--leading-tight);
+}
+
+.categoryBadge {
+  flex-shrink: 0;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: hsla(250, 84%, 54%, 0.1);
+  color: var(--primary-light);
+  border: 1px solid hsla(250, 84%, 54%, 0.15);
+}
+
+.cardContent {
+  position: relative;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sourceLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+/* Relevance bar */
+.relevanceWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.relevanceLabel {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.relevanceBar {
+  width: 60px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-tertiary);
+  overflow: hidden;
+}
+
+.relevanceFill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--gradient-hero);
+  transition: width var(--transition-slow);
+}
+
+/* Skeleton */
+.skeleton {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.skelLine {
+  height: 14px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-card-hover) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  margin-bottom: var(--space-2);
+}
+
+.skelTitle {
+  width: 70%;
+  height: 18px;
+  margin-bottom: var(--space-3);
+}
+
+.skelContent {
+  width: 100%;
+}
+
+.skelContent2 {
+  width: 85%;
+}
+
+.skelBottom {
+  width: 40%;
+  margin-top: var(--space-3);
+}
