@@ -1,5 +1,6 @@
 import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata = {
   title: 'Campus Saathi — Your AI Campus Companion',
@@ -10,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main style={{ paddingTop: 'var(--navbar-height)' }}>{children}</main>
+        <Footer />
       </body>
     </html>
   );
