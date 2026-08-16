@@ -1,57 +1,64 @@
-/* ===== CAMPUS SAATHI — DESIGN SYSTEM ===== */
+/* ===== CAMPUS SAATHI — DESIGN SYSTEM (Light-first, PDF Reference) ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
-  /* Primary palette */
-  --primary: hsl(250, 84%, 54%);
-  --primary-light: hsl(250, 84%, 68%);
-  --primary-dark: hsl(250, 84%, 40%);
-  --primary-50: hsl(250, 84%, 96%);
-  --primary-100: hsl(250, 84%, 90%);
-  --primary-900: hsl(250, 84%, 20%);
+  /* Primary palette — Blue from PDF */
+  --primary: hsl(224, 76%, 48%);
+  --primary-light: hsl(224, 76%, 56%);
+  --primary-dark: hsl(224, 76%, 38%);
+  --primary-50: hsl(224, 76%, 96%);
+  --primary-100: hsl(224, 76%, 90%);
+  --primary-200: hsl(224, 76%, 82%);
+  --primary-900: hsl(224, 76%, 20%);
 
-  /* Accent */
-  --accent: hsl(170, 78%, 46%);
-  --accent-light: hsl(170, 78%, 60%);
-  --accent-dark: hsl(170, 78%, 36%);
-  --accent-glow: hsla(170, 78%, 46%, 0.3);
+  /* Accent — Gold/Amber from PDF badges */
+  --accent: hsl(38, 92%, 50%);
+  --accent-light: hsl(38, 92%, 60%);
+  --accent-dark: hsl(38, 92%, 40%);
 
   /* Semantic */
   --success: hsl(145, 63%, 42%);
+  --success-light: hsl(145, 63%, 92%);
+  --success-text: hsl(145, 63%, 32%);
   --warning: hsl(38, 92%, 50%);
+  --warning-light: hsl(38, 92%, 92%);
+  --warning-text: hsl(38, 70%, 35%);
   --error: hsl(0, 72%, 51%);
+  --error-light: hsl(0, 72%, 94%);
+  --error-text: hsl(0, 72%, 40%);
   --info: hsl(210, 92%, 55%);
+  --info-light: hsl(210, 92%, 94%);
 
-  /* Dark mode (default) */
-  --bg-primary: hsl(230, 25%, 7%);
-  --bg-secondary: hsl(230, 20%, 11%);
-  --bg-tertiary: hsl(230, 18%, 15%);
-  --bg-card: hsl(230, 20%, 13%);
-  --bg-card-hover: hsl(230, 20%, 16%);
-  --bg-glass: hsla(230, 20%, 16%, 0.6);
-  --bg-glass-strong: hsla(230, 20%, 16%, 0.85);
-  --bg-input: hsl(230, 20%, 10%);
-  --bg-elevated: hsl(230, 18%, 18%);
+  /* Light mode (default — matching PDF) */
+  --bg-primary: hsl(220, 20%, 97%);
+  --bg-secondary: hsl(220, 14%, 96%);
+  --bg-tertiary: hsl(220, 14%, 93%);
+  --bg-card: hsl(0, 0%, 100%);
+  --bg-card-hover: hsl(220, 20%, 97%);
+  --bg-glass: hsla(0, 0%, 100%, 0.85);
+  --bg-glass-strong: hsla(0, 0%, 100%, 0.95);
+  --bg-input: hsl(0, 0%, 100%);
+  --bg-elevated: hsl(0, 0%, 100%);
+  --bg-hero: linear-gradient(135deg, hsl(220, 60%, 96%) 0%, hsl(224, 70%, 94%) 50%, hsl(220, 50%, 96%) 100%);
 
-  --text-primary: hsl(220, 20%, 93%);
-  --text-secondary: hsl(220, 15%, 62%);
-  --text-tertiary: hsl(220, 12%, 45%);
-  --text-inverse: hsl(230, 25%, 7%);
+  --text-primary: hsl(220, 25%, 12%);
+  --text-secondary: hsl(220, 10%, 44%);
+  --text-tertiary: hsl(220, 8%, 60%);
+  --text-inverse: hsl(0, 0%, 100%);
 
-  --border: hsla(220, 20%, 30%, 0.3);
-  --border-strong: hsla(220, 20%, 40%, 0.5);
-  --border-accent: hsla(250, 84%, 54%, 0.4);
+  --border: hsl(220, 14%, 90%);
+  --border-strong: hsl(220, 14%, 82%);
+  --border-accent: hsla(224, 76%, 48%, 0.3);
 
-  --shadow-sm: 0 1px 3px hsla(0, 0%, 0%, 0.3);
-  --shadow-md: 0 4px 12px hsla(0, 0%, 0%, 0.4);
-  --shadow-lg: 0 8px 30px hsla(0, 0%, 0%, 0.5);
-  --shadow-glow: 0 0 20px hsla(250, 84%, 54%, 0.15);
-  --shadow-glow-accent: 0 0 20px hsla(170, 78%, 46%, 0.15);
+  --shadow-sm: 0 1px 2px hsla(220, 25%, 12%, 0.04);
+  --shadow-md: 0 4px 12px hsla(220, 25%, 12%, 0.06);
+  --shadow-lg: 0 8px 24px hsla(220, 25%, 12%, 0.08);
+  --shadow-card: 0 1px 3px hsla(220, 25%, 12%, 0.05), 0 1px 2px hsla(220, 25%, 12%, 0.03);
 
   /* Scrollbar */
-  --scrollbar-bg: hsl(230, 20%, 10%);
-  --scrollbar-thumb: hsl(230, 15%, 25%);
+  --scrollbar-bg: hsl(220, 14%, 96%);
+  --scrollbar-thumb: hsl(220, 10%, 80%);
 
   /* Spacing scale (4px base) */
   --space-1: 0.25rem;
@@ -69,10 +76,10 @@
 
   /* Border radius */
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-2xl: 32px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
   --radius-pill: 9999px;
 
   /* Typography */
@@ -98,7 +105,6 @@
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Z-index scale */
   --z-base: 1;
@@ -109,52 +115,10 @@
   --z-toast: 1100;
 
   /* Layout */
-  --navbar-height: 72px;
-  --max-width: 1200px;
+  --navbar-height: 60px;
+  --max-width: 1140px;
   --max-width-chat: 860px;
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-light));
-  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-light));
-  --gradient-hero: linear-gradient(135deg, hsl(250, 84%, 54%) 0%, hsl(280, 70%, 50%) 50%, hsl(170, 78%, 46%) 100%);
-  --gradient-hero-subtle: linear-gradient(135deg, hsla(250, 84%, 54%, 0.15) 0%, hsla(280, 70%, 50%, 0.1) 50%, hsla(170, 78%, 46%, 0.08) 100%);
-  --gradient-glass: linear-gradient(135deg, hsla(255, 100%, 100%, 0.05) 0%, hsla(255, 100%, 100%, 0.02) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(250, 84%, 54%, 0.08), hsla(170, 78%, 46%, 0.04));
-}
-
-/* ===== LIGHT MODE ===== */
-[data-theme="light"] {
-  --bg-primary: hsl(225, 25%, 97%);
-  --bg-secondary: hsl(225, 20%, 93%);
-  --bg-tertiary: hsl(225, 18%, 90%);
-  --bg-card: hsl(0, 0%, 100%);
-  --bg-card-hover: hsl(225, 20%, 97%);
-  --bg-glass: hsla(0, 0%, 100%, 0.7);
-  --bg-glass-strong: hsla(0, 0%, 100%, 0.9);
-  --bg-input: hsl(225, 20%, 95%);
-  --bg-elevated: hsl(0, 0%, 100%);
-
-  --text-primary: hsl(230, 30%, 12%);
-  --text-secondary: hsl(225, 15%, 42%);
-  --text-tertiary: hsl(225, 12%, 60%);
-  --text-inverse: hsl(220, 20%, 93%);
-
-  --border: hsla(225, 20%, 80%, 0.5);
-  --border-strong: hsla(225, 20%, 70%, 0.6);
-  --border-accent: hsla(250, 84%, 54%, 0.3);
-
-  --shadow-sm: 0 1px 3px hsla(230, 30%, 12%, 0.06);
-  --shadow-md: 0 4px 12px hsla(230, 30%, 12%, 0.08);
-  --shadow-lg: 0 8px 30px hsla(230, 30%, 12%, 0.12);
-  --shadow-glow: 0 0 20px hsla(250, 84%, 54%, 0.1);
-  --shadow-glow-accent: 0 0 20px hsla(170, 78%, 46%, 0.1);
-
-  --scrollbar-bg: hsl(225, 20%, 93%);
-  --scrollbar-thumb: hsl(225, 15%, 75%);
-
-  --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.4) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(250, 84%, 54%, 0.05), hsla(170, 78%, 46%, 0.03));
-  --gradient-hero-subtle: linear-gradient(135deg, hsla(250, 84%, 54%, 0.08) 0%, hsla(280, 70%, 50%, 0.06) 50%, hsla(170, 78%, 46%, 0.04) 100%);
+  --sidebar-width: 240px;
 }
 
 /* ===== RESET & BASE ===== */
@@ -179,7 +143,6 @@ body {
   color: var(--text-primary);
   background-color: var(--bg-primary);
   min-height: 100vh;
-  transition: background-color var(--transition-slow), color var(--transition-slow);
   overflow-x: hidden;
 }
 
@@ -200,18 +163,18 @@ body {
 
 /* Selection */
 ::selection {
-  background: hsla(250, 84%, 54%, 0.3);
+  background: hsla(224, 76%, 48%, 0.15);
   color: var(--text-primary);
 }
 
 /* Links */
 a {
-  color: var(--primary-light);
+  color: var(--primary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 a:hover {
-  color: var(--primary);
+  color: var(--primary-dark);
 }
 
 /* Images */
@@ -242,22 +205,8 @@ input, textarea, select {
 }
 
 /* ===== UTILITY CLASSES ===== */
-.glass {
-  background: var(--bg-glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border);
-}
-
-.glass-strong {
-  background: var(--bg-glass-strong);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border);
-}
-
 .gradient-text {
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, var(--primary) 0%, hsl(260, 70%, 50%) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -284,7 +233,7 @@ input, textarea, select {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -295,7 +244,7 @@ input, textarea, select {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-16px);
+    transform: translateY(-12px);
   }
   to {
     opacity: 1;
@@ -306,7 +255,7 @@ input, textarea, select {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-24px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
@@ -317,7 +266,7 @@ input, textarea, select {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(24px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
@@ -328,7 +277,7 @@ input, textarea, select {
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.92);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -339,11 +288,6 @@ input, textarea, select {
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 @keyframes shimmer {
@@ -367,47 +311,6 @@ input, textarea, select {
   }
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-@keyframes borderGlow {
-  0%, 100% { border-color: var(--primary); box-shadow: var(--shadow-glow); }
-  50% { border-color: var(--accent); box-shadow: var(--shadow-glow-accent); }
-}
-
-@keyframes particleFloat1 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(30px, -50px) rotate(90deg); }
-  50% { transform: translate(-20px, -100px) rotate(180deg); }
-  75% { transform: translate(50px, -50px) rotate(270deg); }
-}
-
-@keyframes particleFloat2 {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(-40px, -30px) rotate(-90deg); }
-  50% { transform: translate(30px, -80px) rotate(-180deg); }
-  75% { transform: translate(-20px, -40px) rotate(-270deg); }
-}
-
-@keyframes typing {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-
 /* ===== SKELETON LOADING ===== */
 .skeleton {
   background: linear-gradient(
@@ -429,12 +332,22 @@ input, textarea, select {
   padding: 0 var(--space-6);
 }
 
+/* ===== PAGE WRAPPER ===== */
+.pageWrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-6);
+}
+
 @media (max-width: 768px) {
   :root {
-    --navbar-height: 64px;
+    --navbar-height: 56px;
   }
   .container {
     padding: 0 var(--space-4);
+  }
+  .pageWrapper {
+    padding: var(--space-4);
   }
 }
 
