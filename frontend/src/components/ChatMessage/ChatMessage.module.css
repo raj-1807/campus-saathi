@@ -1,0 +1,224 @@
+.message {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 85%;
+  animation: fadeInUp 0.4s ease-out both;
+}
+
+.messageUser {
+  flex-direction: row-reverse;
+  margin-left: auto;
+}
+
+.messageAi {
+  margin-right: auto;
+}
+
+/* Avatar */
+.avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+.avatarAi {
+  background: var(--gradient-hero);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.avatarUser {
+  background: hsla(250, 84%, 54%, 0.15);
+  color: var(--primary-light);
+}
+
+/* Bubble */
+.bubble {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-sm);
+  position: relative;
+}
+
+.bubbleUser {
+  background: var(--gradient-primary);
+  color: white;
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.bubbleAi {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+/* Markdown content inside AI bubbles */
+.bubbleAi h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.bubbleAi h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.bubbleAi p {
+  margin-bottom: var(--space-2);
+}
+
+.bubbleAi ul, .bubbleAi ol {
+  margin-bottom: var(--space-3);
+  padding-left: var(--space-5);
+}
+
+.bubbleAi li {
+  margin-bottom: var(--space-1);
+}
+
+.bubbleAi strong {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.bubbleAi code {
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+}
+
+/* Timestamp + actions */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+  padding: 0 var(--space-2);
+}
+
+.metaUser {
+  justify-content: flex-end;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.copyBtn {
+  opacity: 0;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  transition: all var(--transition-fast);
+}
+
+.message:hover .copyBtn {
+  opacity: 1;
+}
+
+.copyBtn:hover {
+  color: var(--primary-light);
+  background: hsla(250, 84%, 54%, 0.08);
+}
+
+.copied {
+  color: var(--success);
+}
+
+/* Sources */
+.sources {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+}
+
+.sourcesLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.sourcesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.sourceTag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: hsla(250, 84%, 54%, 0.08);
+  border: 1px solid hsla(250, 84%, 54%, 0.15);
+  color: var(--primary-light);
+  font-size: 11px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.sourceTag:hover {
+  background: hsla(250, 84%, 54%, 0.15);
+}
+
+.sourceRelevance {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Typing indicator */
+.typing {
+  display: flex;
+  gap: 5px;
+  padding: var(--space-4) var(--space-5);
+}
+
+.typingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  animation: dotPulse 1.4s ease-in-out infinite;
+}
+
+.typingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .message {
+    max-width: 92%;
+  }
+
+  .bubble {
+    padding: var(--space-3) var(--space-4);
+  }
+}
